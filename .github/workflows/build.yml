@@ -40,20 +40,11 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: false
 
-      - name: Setup Android SDK
+      - name: Setup Android SDK and NDK
         uses: android-actions/setup-android@v3
         with:
           cmdline-tools-version: 12266719
-          packages: platform-tools
-
-      - name: Install Android NDK 23.2.8568313
-        run: |
-          mkdir -p $ANDROID_HOME/ndk
-          cd $ANDROID_HOME/ndk
-          curl -sL -o ndk.zip https://google.com
-          unzip -q ndk.zip
-          mv android-ndk-r23c $ANDROID_NDK_VERSION
-          rm ndk.zip
+          packages: platform-tools ndk;23.2.8568313
 
       - name: Set up NDK environment
         run: |
