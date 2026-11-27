@@ -106,11 +106,19 @@ public class Gamepad
 
     private void setGamepadButtonKey(GamepadButton gpadBtn, Integer keycode)
     {
+        setGamepadButtonKey(gpadBtn, keycode, null);
+    }
+
+    private void setGamepadButtonKey(GamepadButton gpadBtn, Integer keycode, String customLabel)
+    {
         // Prepare label for gamepad button
         String btnLabel = KeyEvent.keyCodeToString(keycode)
             .replace("KEYCODE_", "")
             .replace("_LEFT", "")
             .replace("_RIGHT", "");
+
+        if (customLabel != null)
+            btnLabel = customLabel;
 
         // Set gamepad button
         gpadBtn.setForegroundText(btnLabel);
@@ -144,12 +152,12 @@ public class Gamepad
 
     private void initGamepadButtons()
     {
-        setGamepadButtonKey(gpadBtnA, mGamepadConfig.keycodeA);
-        setGamepadButtonKey(gpadBtnB, mGamepadConfig.keycodeB);
-        setGamepadButtonKey(gpadBtnC, mGamepadConfig.keycodeC);
-        setGamepadButtonKey(gpadBtnX, mGamepadConfig.keycodeX);
-        setGamepadButtonKey(gpadBtnY, mGamepadConfig.keycodeY);
-        setGamepadButtonKey(gpadBtnZ, mGamepadConfig.keycodeZ);
+        setGamepadButtonKey(gpadBtnA, mGamepadConfig.keycodeA, "A");
+        setGamepadButtonKey(gpadBtnB, mGamepadConfig.keycodeB, "B");
+        setGamepadButtonKey(gpadBtnC, mGamepadConfig.keycodeC, "C");
+        setGamepadButtonKey(gpadBtnX, mGamepadConfig.keycodeX, "X");
+        setGamepadButtonKey(gpadBtnY, mGamepadConfig.keycodeY, "Y");
+        setGamepadButtonKey(gpadBtnZ, mGamepadConfig.keycodeZ, "Z");
         setGamepadButtonKey(gpadBtnL, mGamepadConfig.keycodeL);
         setGamepadButtonKey(gpadBtnR, mGamepadConfig.keycodeR);
         setGamepadButtonKey(gpadBtnCTRL, mGamepadConfig.keycodeCTRL);
