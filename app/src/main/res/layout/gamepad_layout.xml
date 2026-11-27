@@ -89,8 +89,8 @@
 
     <RelativeLayout
         android:id="@+id/buttons_action_layout"
-        android:layout_width="@dimen/_130sdp"
-        android:layout_height="@dimen/_88sdp"
+        android:layout_width="@dimen/_124sdp"
+        android:layout_height="@dimen/_124sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/_10sdp"
@@ -98,94 +98,65 @@
         android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp"
     >
-        <LinearLayout
-            android:id="@+id/buttons_action_row_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_Y"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-        >
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_X"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_Y"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_Z"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/buttons_action_row_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_A"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-        >
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_A"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_B"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-            <com.hatkid.mkxpz.gamepad.GamepadButton
-                android:id="@+id/button_C"
-                android:layout_width="@dimen/_38sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginStart="@dimen/_2sdp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:layout_marginEnd="@dimen/_2sdp"
-                android:layout_marginBottom="@dimen/_2sdp"
-                app:bgDrawable="@drawable/gamepad_button_circle"
-                tools:ignore="ImageContrastCheck"
-            />
-        </LinearLayout>
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_X"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_B"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_C"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+                android:visibility="gone"
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
+        <com.hatkid.mkxpz.gamepad.GamepadButton
+            android:id="@+id/button_Z"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_centerInParent="true"
+                android:visibility="gone"
+            app:bgDrawable="@drawable/gamepad_button_circle"
+            tools:ignore="ImageContrastCheck"
+        />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/buttons_mod_layout"
+        android:visibility="gone"
         android:layout_width="@dimen/_145sdp"
         android:layout_height="@dimen/_23sdp"
         android:layout_alignParentBottom="true"
